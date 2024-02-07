@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 import { PageLayout } from "./components/page-layout";
 import { ListOfTasks } from "./components/list-of-tasks";
-import { FormTask } from "./components/form-task";
+import { FormCreateTask } from "./components/form-create-task";
+import { FormEditTask } from "./components/form-edit-task";
 
 export const router = createBrowserRouter([
     {
@@ -17,7 +18,15 @@ export const router = createBrowserRouter([
         path: "/task",
         element: (
             <PageLayout>
-                <FormTask />
+                <FormCreateTask />
+            </PageLayout>
+        ),
+    },
+    {
+        path: "/task/:taskId",
+        element: (
+            <PageLayout>
+                <FormEditTask />
             </PageLayout>
         ),
     },

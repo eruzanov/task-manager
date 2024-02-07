@@ -1,26 +1,25 @@
 import { Form, Input, Button } from "antd";
-import { useNavigate } from "react-router-dom";
-import { useCreateTask } from "../../features/tasks/useCreateTask";
+import { Task } from "../../features/tasks/types";
 import { useEffect } from "react";
 
-type Task = {
-    title: string;
-    description: string;
-};
+interface FormTaskProps {
+    onFinish: (data: Task) => void;
+    isLoading?: boolean;
+    data?: Task;
+}
 
-export const FormTask = () => {
-    const navigate = useNavigate();
-    const { createTask, isLoading, task } = useCreateTask();
-    const onFinish = (data: Task) => createTask(data);
-
+export const FormTask: React.FC<FormTaskProps> = ({
+    onFinish,
+    isLoading,
+    data,
+}) => {
+    const [form] = Form.useForm();
     useEffect(() => {
-        if (task?.id) {
-            navigate("/");
-        }
-    }, [navigate, task]);
+        if (data?.id) form.setFieldsValue(data);
+    }, [data, form]);
 
     return (
-        <Form layout="vertical" onFinish={onFinish}>
+        <Form layout="vertical" onFinish={onFinish} form={form}>
             <Form.Item<Task>
                 label="Title"
                 name="title"
@@ -33,7 +32,7 @@ export const FormTask = () => {
             </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit" disabled={isLoading}>
-                    Create
+                    Save
                 </Button>
             </Form.Item>
         </Form>
