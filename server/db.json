@@ -15,7 +15,7 @@
     {
       "title": "Удаление задач",
       "description": "по сабжу",
-      "statusId": "819e",
+      "statusId": "f7a2",
       "id": "82fb"
     },
     {
@@ -42,13 +42,19 @@
     },
     {
       "title": "Заменить fetch на useFetcher",
-      "statusId": "d6af",
+      "statusId": "73d5",
       "id": "379a"
     },
     {
       "id": "ec7a",
       "title": "asdasd",
       "description": "asASDasd"
+    },
+    {
+      "title": "Добавить иконки в заголовок",
+      "description": "посмотреть тут https://ant.design/components/icon",
+      "statusId": "819e",
+      "id": "0f02"
     }
   ],
   "statuses": [

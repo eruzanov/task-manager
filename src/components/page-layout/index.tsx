@@ -1,4 +1,4 @@
-import { Layout, theme } from "antd";
+import { Layout, ConfigProvider, theme } from "antd";
 import { NavMenu } from "components/nav-menu";
 
 const { Header, Content } = Layout;
@@ -13,23 +13,34 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
     } = theme.useToken();
 
     return (
-        <Layout>
-            <Header>
-                <NavMenu />
-            </Header>
-            <Content style={{ padding: "0 48px" }}>
-                <div
+        <ConfigProvider
+            theme={{ components: { Layout: { headerPadding: "0 24px" } } }}
+        >
+            <Layout>
+                <Header
                     style={{
-                        background: colorBgContainer,
-                        minHeight: 280,
-                        margin: 24,
-                        padding: 24,
-                        borderRadius: borderRadiusLG,
+                        position: "sticky",
+                        top: 0,
+                        zIndex: 1,
+                        width: "100%",
                     }}
                 >
-                    {children}
-                </div>
-            </Content>
-        </Layout>
+                    <NavMenu />
+                </Header>
+                <Content>
+                    <div
+                        style={{
+                            background: colorBgContainer,
+                            minHeight: 280,
+                            margin: 24,
+                            padding: 24,
+                            borderRadius: borderRadiusLG,
+                        }}
+                    >
+                        {children}
+                    </div>
+                </Content>
+            </Layout>
+        </ConfigProvider>
     );
 };
