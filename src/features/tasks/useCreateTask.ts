@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Task } from "./types";
+import { NewTask, Task } from "./types";
 import { API_URL } from "./constants";
 
 export const useCreateTask = () => {
     const [task, setTask] = useState<Task>();
     const [isLoading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<unknown>();
-    const createTask = async (data: Task) => {
+    const createTask = async (data: NewTask) => {
         setLoading(true);
         setError(false);
         try {

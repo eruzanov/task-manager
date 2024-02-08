@@ -21,7 +21,7 @@
     {
       "title": "[Board] добавить страницу и сверстать layout",
       "description": "by subj",
-      "statusId": "819e",
+      "statusId": "73d5",
       "id": "b98b"
     },
     {
@@ -36,6 +36,7 @@
     },
     {
       "title": "Компонент с тегами для задач",
+      "description": "использовать <Tag />",
       "statusId": "73d5",
       "id": "61e1"
     }
