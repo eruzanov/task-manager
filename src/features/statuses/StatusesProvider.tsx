@@ -1,6 +1,6 @@
 import { createContext, useEffect } from "react";
+import { useFetcher } from "features/fetcher/useFetcher";
 import { Status } from "./types";
-import { useFetcher } from "../fetcher/useFetcher";
 
 export const StatusesContext = createContext<Status[]>([]);
 

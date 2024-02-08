@@ -1,7 +1,7 @@
 import { Row, Col, Flex, Divider } from "antd";
-import { useStatuses } from "../../features/statuses/useSatuses";
-import { BoardCard } from "../board-card";
-import { Status } from "../status";
+import { useStatuses } from "features/statuses/useSatuses";
+import { BoardCard } from "components/board-card";
+import { Status } from "components/status";
 
 export const Board = () => {
     const { statuses } = useStatuses();

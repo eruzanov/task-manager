@@ -1,6 +1,6 @@
 import { List } from "antd";
-import { useTasks } from "../../features/tasks/useTasks";
-import { Status } from "../status";
+import { useTasks } from "features/tasks/useTasks";
+import { Status } from "components/status";
 
 export const ListOfTasks = () => {
     const { tasks, isLoading } = useTasks();

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Form, Input, Select, Button } from "antd";
-import { Task } from "../../features/tasks/types";
-import { useStatuses } from "../../features/statuses/useSatuses";
-import { Status } from "../status";
+import { Task } from "features/tasks/types";
+import { useStatuses } from "features/statuses/useSatuses";
+import { Status } from "components/status";
 
 interface FormTaskProps {
     onFinish: (data: Task) => void;
@@ -17,9 +17,9 @@ export const FormTask: React.FC<FormTaskProps> = ({
 }) => {
     const { statuses } = useStatuses();
     const [form] = Form.useForm();
-    const selectOptions = statuses.map(({ id, title }) => ({
+    const selectOptions = statuses.map(({ id }) => ({
         value: id,
-        label: <Status statusId={id} title={title} />,
+        label: <Status statusId={id} />,
     }));
 
     useEffect(() => {

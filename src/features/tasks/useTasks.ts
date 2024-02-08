@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import { Task } from "./types";
 import { API_URL } from "./constants";
-import { useEffect, useState } from "react";
 
 export const useTasks = () => {
     const [isLoading, setLoading] = useState(false);

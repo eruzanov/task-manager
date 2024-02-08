@@ -1,4 +1,4 @@
-import { Status } from "../statuses/types";
+import { Status } from "features/statuses/types";
 
 export type Task = {
     id?: string;

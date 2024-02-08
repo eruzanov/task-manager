@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useCreateTask } from "../../features/tasks/useCreateTask";
-import { FormTask } from "../form-task";
+import { useCreateTask } from "features/tasks/useCreateTask";
+import { FormTask } from "components/form-task";
 
 type Task = {
     title: string;

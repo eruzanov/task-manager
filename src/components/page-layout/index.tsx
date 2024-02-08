@@ -1,5 +1,5 @@
 import { Layout, theme } from "antd";
-import { NavMenu } from "../nav-menu";
+import { NavMenu } from "components/nav-menu";
 
 const { Header, Content } = Layout;
 
