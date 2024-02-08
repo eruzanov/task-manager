@@ -4,7 +4,6 @@ import { useColor } from "./useColor";
 
 export interface TagOfTaskProps {
     statusId?: string;
-    title?: string;
 }
 
 export const Status: React.FC<TagOfTaskProps> = ({ statusId }) => {

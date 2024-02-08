@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const items = [
     { key: "/", label: "List of tasks" },
+    { key: "/board", label: "Board" },
     { key: "/task", label: "Create Task" },
 ];
 

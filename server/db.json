@@ -3,27 +3,59 @@
     {
       "title": "Добавить редактирование задач",
       "description": "по сабжу",
+      "statusId": "73d5",
       "id": "fe75"
     },
     {
       "title": "Добавить Board",
       "description": "Будет показывать задачи в колонках, у задач появятся статусы",
+      "statusId": "d6af",
       "id": "4123"
     },
     {
       "title": "Удаление задач",
       "description": "по сабжу",
+      "statusId": "819e",
       "id": "82fb"
     },
     {
       "title": "[Board] добавить страницу и сверстать layout",
       "description": "by subj",
+      "statusId": "819e",
       "id": "b98b"
     },
     {
       "id": "c4b3",
       "title": "TEST",
       "description": "desc"
+    },
+    {
+      "title": " Добавить в задачи статусы",
+      "statusId": "73d5",
+      "id": "1b01"
+    },
+    {
+      "title": "Компонент с тегами для задач",
+      "statusId": "73d5",
+      "id": "61e1"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "819e",
+      "title": "todo"
+    },
+    {
+      "id": "f7a2",
+      "title": "in progress"
+    },
+    {
+      "id": "d6af",
+      "title": "review"
+    },
+    {
+      "id": "73d5",
+      "title": "done"
     }
   ]
 }

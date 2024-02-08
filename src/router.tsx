@@ -4,6 +4,7 @@ import { PageLayout } from "./components/page-layout";
 import { ListOfTasks } from "./components/list-of-tasks";
 import { FormCreateTask } from "./components/form-create-task";
 import { FormEditTask } from "./components/form-edit-task";
+import { Board } from "./components/board";
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +28,14 @@ export const router = createBrowserRouter([
         element: (
             <PageLayout>
                 <FormEditTask />
+            </PageLayout>
+        ),
+    },
+    {
+        path: "/board",
+        element: (
+            <PageLayout>
+                <Board />
             </PageLayout>
         ),
     },
