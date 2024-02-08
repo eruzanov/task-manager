@@ -15,7 +15,7 @@
     {
       "title": "Удаление задач",
       "description": "по сабжу",
-      "statusId": "f7a2",
+      "statusId": "819e",
       "id": "82fb"
     },
     {
@@ -53,8 +53,14 @@
     {
       "title": "Добавить иконки в заголовок",
       "description": "посмотреть тут https://ant.design/components/icon",
-      "statusId": "819e",
+      "statusId": "f7a2",
       "id": "0f02"
+    },
+    {
+      "title": "Добавить ссылку на Github",
+      "description": "Добавить футер и в него уже вставить ссылку",
+      "statusId": "819e",
+      "id": "a4e6"
     }
   ],
   "statuses": [

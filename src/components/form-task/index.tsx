@@ -15,13 +15,15 @@ export const FormTask: React.FC<FormTaskProps> = ({
     data,
 }) => {
     const [form] = Form.useForm();
+    const hasId = Boolean(data?.id);
+    const size = "large"
 
     useEffect(() => {
-        if (data?.id) form.setFieldsValue(data);
-    }, [data, form]);
+        if (hasId) form.setFieldsValue(data);
+    }, [data, form, hasId]);
 
     return (
-        <Form layout="vertical" onFinish={onFinish} form={form}>
+        <Form layout="vertical" onFinish={onFinish} form={form} size={size}>
             <Form.Item<Task>
                 label="Title"
                 name="title"
@@ -32,9 +34,9 @@ export const FormTask: React.FC<FormTaskProps> = ({
             <Form.Item<Task> label="Description" name="description">
                 <Input.TextArea />
             </Form.Item>
-            {data?.id && <SelectStatus />}
+            {hasId && <SelectStatus />}
             <Form.Item>
-                <Button type="primary" htmlType="submit" disabled={isLoading}>
+                <Button type="primary" htmlType="submit" size={size} disabled={isLoading}>
                     Save
                 </Button>
             </Form.Item>
