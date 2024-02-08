@@ -1,6 +1,8 @@
-import { Form, Input, Button } from "antd";
-import { Task } from "../../features/tasks/types";
 import { useEffect } from "react";
+import { Form, Input, Select, Button } from "antd";
+import { Task } from "../../features/tasks/types";
+import { useStatuses } from "../../features/statuses/useSatuses";
+import { Status } from "../status";
 
 interface FormTaskProps {
     onFinish: (data: Task) => void;
@@ -13,7 +15,13 @@ export const FormTask: React.FC<FormTaskProps> = ({
     isLoading,
     data,
 }) => {
+    const { statuses } = useStatuses();
     const [form] = Form.useForm();
+    const selectOptions = statuses.map(({ id, title }) => ({
+        value: id,
+        label: <Status statusId={id} title={title} />,
+    }));
+
     useEffect(() => {
         if (data?.id) form.setFieldsValue(data);
     }, [data, form]);
@@ -29,6 +37,9 @@ export const FormTask: React.FC<FormTaskProps> = ({
             </Form.Item>
             <Form.Item<Task> label="Description" name="description">
                 <Input.TextArea />
+            </Form.Item>
+            <Form.Item<Task> label="Status" name="statusId">
+                <Select options={selectOptions} />
             </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit" disabled={isLoading}>
