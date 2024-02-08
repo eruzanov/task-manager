@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import { Form, Input, Select, Button } from "antd";
+import { Form, Input, Button } from "antd";
 import { Task } from "features/tasks/types";
-import { useStatuses } from "features/statuses/useSatuses";
-import { Status } from "components/status";
+import { SelectStatus } from "./SelectStatus";
 
 interface FormTaskProps {
     onFinish: (data: Task) => void;
@@ -15,12 +14,7 @@ export const FormTask: React.FC<FormTaskProps> = ({
     isLoading,
     data,
 }) => {
-    const { statuses } = useStatuses();
     const [form] = Form.useForm();
-    const selectOptions = statuses.map(({ id }) => ({
-        value: id,
-        label: <Status statusId={id} />,
-    }));
 
     useEffect(() => {
         if (data?.id) form.setFieldsValue(data);
@@ -38,9 +32,7 @@ export const FormTask: React.FC<FormTaskProps> = ({
             <Form.Item<Task> label="Description" name="description">
                 <Input.TextArea />
             </Form.Item>
-            <Form.Item<Task> label="Status" name="statusId">
-                <Select options={selectOptions} />
-            </Form.Item>
+            {data?.id && <SelectStatus />}
             <Form.Item>
                 <Button type="primary" htmlType="submit" disabled={isLoading}>
                     Save
