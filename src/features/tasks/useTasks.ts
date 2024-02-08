@@ -1,22 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useFetcher } from "features/fetcher/useFetcher";
 import { Task } from "./types";
-import { API_URL } from "./constants";
 
 export const useTasks = () => {
-    const [isLoading, setLoading] = useState(false);
-    const [tasks, setTasks] = useState<Task[]>([]);
-
-    const getTasks = async () => {
-        setLoading(true);
-        const response = await fetch(`${API_URL}/tasks`);
-        const tasks = await response.json();
-        setTasks(tasks);
-        setLoading(false);
-    };
+    const { data, isLoading, query } = useFetcher<Task[]>();
 
     useEffect(() => {
-        getTasks();
-    }, []);
+        query("tasks");
+    }, [query]);
 
-    return { tasks, isLoading };
+    return { tasks: data ?? [], isLoading };
 };

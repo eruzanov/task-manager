@@ -39,6 +39,16 @@
       "description": "использовать <Tag />",
       "statusId": "73d5",
       "id": "61e1"
+    },
+    {
+      "title": "Заменить fetch на useFetcher",
+      "statusId": "d6af",
+      "id": "379a"
+    },
+    {
+      "id": "ec7a",
+      "title": "asdasd",
+      "description": "asASDasd"
     }
   ],
   "statuses": [

@@ -1,36 +1,18 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import { Task } from "./types";
-import { API_URL } from "./constants";
+import { useFetcher } from "features/fetcher/useFetcher";
 
 export const useEditTask = (id: string | undefined) => {
-    const [isLoading, setLoading] = useState(false);
-    const [task, setTask] = useState<Task>();
+    const { data, isLoading, query, update } = useFetcher<Task>();
 
     const updateTask = useCallback(
-        async (data: Task) => {
-            setLoading(true);
-            const response = await fetch(`${API_URL}/tasks/${id}`, {
-                method: "put",
-                body: JSON.stringify(data),
-            });
-            const task = await response.json();
-            setTask(task);
-            setLoading(false);
-        },
-        [id]
+        (data: Task) => update(`tasks/${id}`, data),
+        [id, update]
     );
 
-    const getTask = useCallback(async () => {
-        setLoading(true);
-        const response = await fetch(`${API_URL}/tasks/${id}`);
-        const task = await response.json();
-        setTask(task);
-        setLoading(false);
-    }, [id]);
-
     useEffect(() => {
-        getTask();
-    }, [getTask]);
+        query(`tasks/${id}`);
+    }, [id, query]);
 
-    return { task, update: updateTask, isLoading };
+    return { task: data, update: updateTask, isLoading };
 };

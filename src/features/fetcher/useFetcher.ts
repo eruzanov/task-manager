@@ -14,13 +14,29 @@ export const useFetcher = <T>() => {
         setLoading(false);
     }, []);
 
-    const mutate = useCallback(
-        async <T extends { id: unknown }>(path: string, payload: T) => {
+    const create = useCallback(async <P>(path: string, payload: P) => {
+        setLoading(true);
+            setError(false);
+            try {
+                const response = await fetch(`${API_URL}/${path}`, {
+                    method: "post",
+                    body: JSON.stringify(payload),
+                });
+                const data = await response.json();
+                setData(data);
+            } catch (err) {
+                setError(err);
+            }
+            setLoading(false);
+    }, [])
+
+    const update = useCallback(
+        async <T extends { id?: unknown }>(path: string, payload: T) => {
             setLoading(true);
             setError(false);
             try {
                 const response = await fetch(`${API_URL}/${path}`, {
-                    method: payload.id ? "put" : "post",
+                    method: "put",
                     body: JSON.stringify(payload),
                 });
                 const data = await response.json();
@@ -33,5 +49,5 @@ export const useFetcher = <T>() => {
         []
     );
 
-    return { data, isLoading, error, query, mutate };
+    return { data, isLoading, error, query, create, update };
 };
