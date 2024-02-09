@@ -1,10 +1,16 @@
+import type { MenuProps } from "antd";
 import { Menu } from "antd";
 import { useNavigate } from "react-router-dom";
+import {
+    UnorderedListOutlined,
+    ProjectOutlined,
+    PlusOutlined,
+} from "@ant-design/icons";
 
-const items = [
-    { key: "/", label: "List of tasks" },
-    { key: "/board", label: "Board" },
-    { key: "/task", label: "Create Task" },
+const items: MenuProps["items"] = [
+    { key: "/", label: "List of tasks", icon: <UnorderedListOutlined /> },
+    { key: "/board", label: "Board", icon: <ProjectOutlined /> },
+    { key: "/task", label: "Create Task", icon: <PlusOutlined /> },
 ];
 
 export const NavMenu = () => {
