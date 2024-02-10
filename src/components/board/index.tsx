@@ -1,4 +1,5 @@
 import { Row, Col, Flex, Divider } from "antd";
+
 import { useStatuses } from "features/statuses/useSatuses";
 import { useTasks } from "features/tasks/useTasks";
 import { BoardCard } from "components/board-card";
@@ -16,8 +17,9 @@ export const Board = () => {
                 );
                 return (
                     <Col span={6} key={status.id}>
-                        <Status statusId={status.id} />
-                        <Divider />
+                        <Divider orientation="left" orientationMargin="0">
+                            <Status statusId={status.id} />
+                        </Divider>
                         <Flex vertical gap="middle">
                             {cards.map(({ id, title, description }) => (
                                 <BoardCard
