@@ -1,13 +1,18 @@
-import { useEffect } from "react";
-import { useFetcher } from "features/fetcher/useFetcher";
+import { useQuery } from "react-query";
 import { Task } from "./types";
 
-export const useTasks = () => {
-    const { data, isLoading, query } = useFetcher<Task[]>();
+const API_URL = import.meta.env.VITE_API_URL;
 
-    useEffect(() => {
-        query("tasks");
-    }, [query]);
+const getTasks = async (): Promise<Task[]> => {
+    const response = await fetch(`${API_URL}/tasks`);
+
+    return response.json();
+};
+
+export const useTasks = () => {
+    const { data, isLoading } = useQuery("tasks", getTasks, {
+        placeholderData: [],
+    });
 
     return { tasks: data ?? [], isLoading };
 };

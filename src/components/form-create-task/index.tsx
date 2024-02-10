@@ -1,19 +1,18 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { NewTask, Task } from "features/tasks/types";
-import { useFetcher } from "features/fetcher/useFetcher";
+
+import { NewTask } from "features/tasks/types";
+import { useCreateTask } from "features/tasks/useCreateTask";
 import { FormTask } from "components/form-task";
 
 export const FormCreateTask = () => {
     const navigate = useNavigate();
-    const { data, isLoading, create } = useFetcher<Task>();
-    const onFinish = (data: NewTask) => create("tasks", data);
+    const { create, isLoading, isSuccess } = useCreateTask();
+    const onFinish = (data: NewTask) => create(data);
 
     useEffect(() => {
-        if (data?.id) {
-            navigate("/");
-        }
-    }, [navigate, data]);
+        if (isSuccess) navigate("/");
+    }, [navigate, isSuccess]);
 
     return (
         <>

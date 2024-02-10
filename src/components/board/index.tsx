@@ -15,12 +15,13 @@ export const Board = () => {
                     ({ statusId }) => statusId === status.id
                 );
                 return (
-                    <Col span={6}>
+                    <Col span={6} key={status.id}>
                         <Status statusId={status.id} />
                         <Divider />
                         <Flex vertical gap="middle">
                             {cards.map(({ id, title, description }) => (
                                 <BoardCard
+                                    key={id}
                                     id={id}
                                     title={title}
                                     content={description}

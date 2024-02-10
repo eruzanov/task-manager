@@ -9,12 +9,12 @@
     {
       "title": "Добавить Board",
       "description": "Будет показывать задачи в колонках, у задач появятся статусы",
-      "statusId": "d6af",
+      "statusId": "73d5",
       "id": "4123"
     },
     {
       "title": "Удаление задач",
-      "description": "по сабжу",
+      "description": "Добавить кнопку Remove в форму редактирования задачи",
       "statusId": "819e",
       "id": "82fb"
     },
@@ -37,7 +37,7 @@
     {
       "title": "Компонент с тегами для задач",
       "description": "использовать <Tag />",
-      "statusId": "d6af",
+      "statusId": "73d5",
       "id": "61e1"
     },
     {
@@ -53,19 +53,44 @@
     {
       "title": "Добавить иконки в заголовок",
       "description": "посмотреть тут https://ant.design/components/icon",
-      "statusId": "d6af",
+      "statusId": "73d5",
       "id": "0f02"
     },
     {
       "title": "Добавить ссылку на Github",
       "description": "Добавить футер и в него уже вставить ссылку",
-      "statusId": "f7a2",
+      "statusId": "d6af",
       "id": "a4e6"
     },
     {
       "title": "Добавить фильтр в список задач",
+      "description": "фильтр по статусам",
       "statusId": "819e",
       "id": "db07"
+    },
+    {
+      "title": "Заменить useFetcher на React Query",
+      "description": "https://tanstack.com/query/v3",
+      "statusId": "f7a2",
+      "id": "f19a"
+    },
+    {
+      "title": "Добавить сортировку в список задач",
+      "description": "Сортировка по времени изменения, нужно к задаче добавить timestamp",
+      "statusId": "819e",
+      "id": "beaf"
+    },
+    {
+      "title": "Обновить README",
+      "description": "Описать цель проекта и его запуск",
+      "statusId": "819e",
+      "id": "6adb"
+    },
+    {
+      "title": "Переход на прошлую страницу страницу после изменения задачи",
+      "description": "Реализовать перход на прошлую страницу после создания или редактирования задачи",
+      "statusId": "819e",
+      "id": "19ca"
     }
   ],
   "statuses": [

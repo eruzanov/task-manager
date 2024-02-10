@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card } from "antd";
 
 interface BoardCardProps {
@@ -7,10 +8,7 @@ interface BoardCardProps {
 }
 
 export const BoardCard: React.FC<BoardCardProps> = ({ id, title, content }) => (
-    <Card
-        title={title}
-        extra={<a href={`/task/${id}`}>Edit</a>}
-    >
+    <Card title={title} extra={<Link to={`/task/${id}`}>Edit</Link>}>
         {content}
     </Card>
 );
