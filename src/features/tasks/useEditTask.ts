@@ -1,22 +1,23 @@
-import { useQuery, useMutation } from "react-query";
+import { useCallback } from "react";
+import { useMutation } from "react-query";
+
+import { useTask } from "./useTask";
 import { Task } from "./types";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-const getTask = async (id: string | undefined): Promise<Task> => {
-    const response = await fetch(`${API_URL}/tasks/${id}`);
-
-    return response.json();
-};
-
-export const useEditTask = (id: string | undefined) => {
-    const { data, isLoading } = useQuery(["tasks", id], () => getTask(id));
-    const { mutate } = useMutation((payload: Task) =>
-        fetch(`${API_URL}/tasks/${id}`, {
-            method: "put",
-            body: JSON.stringify(payload),
-        })
+export const useEditTask = (id: string) => {
+    const { task } = useTask(id);
+    const updateTask = useCallback(
+        (payload: Task) => {
+            return fetch(`${API_URL}/tasks/${id}`, {
+                method: "put",
+                body: JSON.stringify(payload),
+            });
+        },
+        [id]
     );
+    const { mutate, isLoading, isSuccess } = useMutation(updateTask);
 
-    return { task: data, update: mutate, isLoading };
+    return { task, update: mutate, isLoading, isSuccess };
 };

@@ -2,7 +2,7 @@
   "tasks": [
     {
       "title": "Добавить редактирование задач",
-      "description": "по сабжу",
+      "description": "by subj",
       "statusId": "73d5",
       "id": "fe75"
     },
@@ -25,9 +25,9 @@
       "id": "b98b"
     },
     {
-      "id": "c4b3",
-      "title": "TEST",
-      "description": "desc"
+      "title": "TESTq",
+      "description": "desc",
+      "id": "c4b3"
     },
     {
       "title": " Добавить в задачи статусы",
@@ -71,7 +71,7 @@
     {
       "title": "Заменить useFetcher на React Query",
       "description": "https://tanstack.com/query/v3",
-      "statusId": "f7a2",
+      "statusId": "d6af",
       "id": "f19a"
     },
     {
@@ -83,13 +83,13 @@
     {
       "title": "Обновить README",
       "description": "Описать цель проекта и его запуск",
-      "statusId": "819e",
+      "statusId": "d6af",
       "id": "6adb"
     },
     {
       "title": "Переход на прошлую страницу страницу после изменения задачи",
-      "description": "Реализовать перход на прошлую страницу после создания или редактирования задачи",
-      "statusId": "819e",
+      "description": "Реализовать переход на прошлую страницу после создания или редактирования задачи",
+      "statusId": "f7a2",
       "id": "19ca"
     }
   ],

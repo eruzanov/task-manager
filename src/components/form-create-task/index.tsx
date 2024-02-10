@@ -11,7 +11,7 @@ export const FormCreateTask = () => {
     const onFinish = (data: NewTask) => create(data);
 
     useEffect(() => {
-        if (isSuccess) navigate("/");
+        if (isSuccess) navigate(-1);
     }, [navigate, isSuccess]);
 
     return (

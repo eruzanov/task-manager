@@ -8,7 +8,5 @@ interface BoardCardProps {
 }
 
 export const BoardCard: React.FC<BoardCardProps> = ({ id, title, content }) => (
-    <Card title={title} extra={<Link to={`/task/${id}`}>Edit</Link>}>
-        {content}
-    </Card>
+    <Card title={<Link to={`/task/${id}`}>{title}</Link>}>{content}</Card>
 );

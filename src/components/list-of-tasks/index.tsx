@@ -1,4 +1,6 @@
 import { List, theme } from "antd";
+import { Link } from "react-router-dom";
+
 import { useTasks } from "features/tasks/useTasks";
 import { Status } from "components/status";
 
@@ -20,7 +22,7 @@ export const ListOfTasks = () => {
             renderItem={(task) => (
                 <List.Item>
                     <List.Item.Meta
-                        title={<a href={`/task/${task.id}`}>{task.title}</a>}
+                        title={<Link to={`/task/${task.id}`}>{task.title}</Link>}
                         description={task.description}
                     />
                     <Status statusId={task.statusId} />
