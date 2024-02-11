@@ -1,24 +1,30 @@
 import { useMemo } from "react";
+import type { MenuProps } from "antd";
 import { Menu } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
     UnorderedListOutlined,
     ProjectOutlined,
-    PlusOutlined,
+    CalendarOutlined,
 } from "@ant-design/icons";
 
-const items = [
+const items: MenuProps["items"] = [
     { key: "/", label: "Backlog", icon: <UnorderedListOutlined /> },
     { key: "/board", label: "Board", icon: <ProjectOutlined /> },
-    { key: "/task", label: "Create Task", icon: <PlusOutlined /> },
+    {
+        key: "/calendar",
+        label: "Calendar",
+        icon: <CalendarOutlined />,
+        disabled: true,
+    },
 ];
 
-export const NavMenu = () => {
+export const PageLayoutNavMenu = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const onClick = ({ key }: { key: string }) => navigate(key);
     const current = useMemo(
-        () => items.find(({ key }) => key === location.pathname) ?? { key: "" },
+        () => items.find((item) => item?.key === location.pathname),
         [location.pathname]
     );
 
@@ -28,7 +34,7 @@ export const NavMenu = () => {
             mode="horizontal"
             onClick={onClick}
             items={items}
-            selectedKeys={[current.key]}
+            selectedKeys={[current?.key as string]}
         />
     );
 };

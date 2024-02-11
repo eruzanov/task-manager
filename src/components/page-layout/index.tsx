@@ -1,9 +1,7 @@
-import { Layout, ConfigProvider, Button, Flex } from "antd";
-import { GithubOutlined } from "@ant-design/icons";
+import { Layout, ConfigProvider } from "antd";
 
-import { NavMenu } from "components/nav-menu";
-
-const GITHUB_LINK = "https://github.com/eruzanov/task-manager";
+import { PageLayoutHeader } from "components/page-layout-header";
+import { PageLayoutFooter } from "components/page-layout-footer";
 
 interface PageLayoutProps {
     children: React.ReactNode;
@@ -14,30 +12,9 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => (
         theme={{ components: { Layout: { headerPadding: "0 24px" } } }}
     >
         <Layout style={{ minHeight: "100vh" }}>
-            <Layout.Header
-                style={{
-                    position: "sticky",
-                    top: 0,
-                    zIndex: 1,
-                    width: "100%",
-                }}
-            >
-                <NavMenu />
-            </Layout.Header>
+            <PageLayoutHeader />
             <Layout.Content style={{ margin: 24 }}>{children}</Layout.Content>
-            <Layout.Footer>
-                <Flex align="center" justify="center">
-                    <Button
-                        type="link"
-                        href={GITHUB_LINK}
-                        target="_blank"
-                        icon={<GithubOutlined />}
-                        size="large"
-                    >
-                        Github
-                    </Button>
-                </Flex>
-            </Layout.Footer>
+            <PageLayoutFooter />
         </Layout>
     </ConfigProvider>
 );

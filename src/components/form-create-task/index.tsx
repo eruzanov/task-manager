@@ -1,23 +1,20 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { NewTask } from "features/tasks/types";
 import { useCreateTask } from "features/tasks/useCreateTask";
 import { FormTask } from "components/form-task";
 
-export const FormCreateTask = () => {
-    const navigate = useNavigate();
+interface FormCreateTask {
+    onSuccess: () => void;
+}
+
+export const FormCreateTask: React.FC<FormCreateTask> = ({ onSuccess }) => {
     const { create, isLoading, isSuccess } = useCreateTask();
     const onFinish = (data: NewTask) => create(data);
 
     useEffect(() => {
-        if (isSuccess) navigate(-1);
-    }, [navigate, isSuccess]);
+        if (isSuccess) onSuccess();
+    }, [isSuccess, onSuccess]);
 
-    return (
-        <>
-            <h2>Create task</h2>
-            <FormTask onFinish={onFinish} isLoading={isLoading} />
-        </>
-    );
+    return <FormTask onFinish={onFinish} isLoading={isLoading} />;
 };
