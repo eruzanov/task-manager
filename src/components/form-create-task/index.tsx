@@ -10,7 +10,7 @@ interface FormCreateTask {
 
 export const FormCreateTask: React.FC<FormCreateTask> = ({ onSuccess }) => {
     const { create, isLoading, isSuccess } = useCreateTask();
-    const onFinish = (data: NewTask) => create(data);
+    const onFinish = (values: NewTask) => create(values);
 
     useEffect(() => {
         if (isSuccess) onSuccess();

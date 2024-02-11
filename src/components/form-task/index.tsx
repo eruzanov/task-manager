@@ -1,7 +1,8 @@
-import { useEffect } from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, DatePicker } from "antd";
+
 import { Task } from "features/tasks/types";
 import { SelectStatus } from "./SelectStatus";
+import { useDateTime } from "features/datetime/useDateTime";
 
 interface FormTaskProps {
     onFinish: (data: Task) => void;
@@ -14,21 +15,21 @@ export const FormTask: React.FC<FormTaskProps> = ({
     isLoading,
     data,
 }) => {
-    const [form] = Form.useForm();
+    const datetime = useDateTime();
     const existingTask = Boolean(data?.id);
-    const size = "large";
-
-    useEffect(() => {
-        if (existingTask) form.setFieldsValue(data);
-    }, [data, form, existingTask]);
+    const initialValues = {
+        ...data,
+        deadlineAt: data?.deadlineAt ? datetime(data.deadlineAt) : undefined,
+    };
+    const handleFinish = (values: Task) =>
+        onFinish({ ...values, deadlineAt: values.deadlineAt?.valueOf() });
 
     return (
         <Form
             layout="vertical"
-            onFinish={onFinish}
-            form={form}
-            size={size}
-            style={{ minHeight: 280 }}
+            onFinish={handleFinish}
+            initialValues={initialValues}
+            disabled={isLoading}
         >
             <Form.Item<Task>
                 label="Title"
@@ -40,14 +41,12 @@ export const FormTask: React.FC<FormTaskProps> = ({
             <Form.Item<Task> label="Description" name="description">
                 <Input.TextArea autoSize={existingTask} rows={4} />
             </Form.Item>
+            <Form.Item label="Deadline" name="deadlineAt">
+                <DatePicker disabledDate={(current) => current && current < datetime().startOf('day')} />
+            </Form.Item>
             {existingTask && <SelectStatus />}
             <Form.Item>
-                <Button
-                    type="primary"
-                    htmlType="submit"
-                    size={size}
-                    disabled={isLoading}
-                >
+                <Button type="primary" htmlType="submit">
                     Save
                 </Button>
             </Form.Item>

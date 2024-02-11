@@ -7,6 +7,7 @@ export type Task = {
     description: string;
     createdAt: number;
     updatedAt: number;
+    deadlineAt?: number;
 };
 
 export type NewTask = Omit<Task, "id" | "statusId" | "updatedAt">;

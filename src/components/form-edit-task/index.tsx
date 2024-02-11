@@ -18,7 +18,7 @@ export const FormEditTask = () => {
     return (
         <Card>
             <TaskTitle taskId={taskId} />
-            <FormTask onFinish={update} data={task} isLoading={isLoading} />
+            {task && <FormTask onFinish={update} data={task} isLoading={isLoading} />}
         </Card>
     );
 };
