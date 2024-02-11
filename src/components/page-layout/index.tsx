@@ -30,6 +30,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => (
                     <Button
                         type="link"
                         href={GITHUB_LINK}
+                        target="_blank"
                         icon={<GithubOutlined />}
                         size="large"
                     >

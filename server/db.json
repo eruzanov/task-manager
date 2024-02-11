@@ -29,13 +29,7 @@
       "id": "b98b"
     },
     {
-      "title": "TESTq",
-      "description": "desc",
-      "updatedAt": 1707604752768,
-      "id": "c4b3"
-    },
-    {
-      "title": " Добавить в задачи статусы",
+      "title": "Добавить в задачи статусы",
       "statusId": "5f33",
       "updatedAt": 1707615387404,
       "id": "1b01"
@@ -52,12 +46,6 @@
       "statusId": "73d5",
       "updatedAt": 1707605306250,
       "id": "379a"
-    },
-    {
-      "title": "asdasd",
-      "description": "asASDasd",
-      "updatedAt": 1707605860333,
-      "id": "ec7a"
     },
     {
       "title": "Добавить иконки в заголовок",
