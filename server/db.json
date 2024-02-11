@@ -17,8 +17,8 @@
     {
       "title": "Удаление задач",
       "description": "Добавить кнопку Remove в форму редактирования задачи\n\nНужно закрыть, в пользу задачи http://localhost:5173/task/33aa",
-      "statusId": "819e",
-      "updatedAt": 1707604739252,
+      "statusId": "5f33",
+      "updatedAt": 1707616867441,
       "id": "82fb"
     },
     {
@@ -43,8 +43,8 @@
     },
     {
       "title": "Заменить fetch на useFetcher",
-      "statusId": "73d5",
-      "updatedAt": 1707605306250,
+      "statusId": "5f33",
+      "updatedAt": 1707616084209,
       "id": "379a"
     },
     {
@@ -57,15 +57,15 @@
     {
       "title": "Добавить ссылку на Github",
       "description": "Добавить футер и в него уже вставить ссылку",
-      "statusId": "d6af",
-      "updatedAt": 1707605977918,
+      "statusId": "5f33",
+      "updatedAt": 1707615992684,
       "id": "a4e6"
     },
     {
       "title": "Добавить фильтр в список задач",
       "description": "фильтр по статусам",
-      "statusId": "f7a2",
-      "updatedAt": 1707615576335,
+      "statusId": "819e",
+      "updatedAt": 1707615977582,
       "id": "db07"
     },
     {
@@ -113,9 +113,21 @@
     {
       "title": "Добавить метку дедлайна в задачу",
       "description": "Добавить в задачу свойтво deadlineAt, и вывести на карточке",
-      "statusId": "819e",
-      "updatedAt": 1707615569146,
+      "statusId": "f7a2",
+      "updatedAt": 1707616625740,
       "id": "16c0"
+    },
+    {
+      "title": "Добавить хук для форматирования дат",
+      "statusId": "d6af",
+      "updatedAt": 1707616617151,
+      "id": "a8b9"
+    },
+    {
+      "title": "Добавить прогон линтера на пре-коммит",
+      "statusId": "819e",
+      "updatedAt": 1707616071269,
+      "id": "766e"
     }
   ],
   "statuses": [
