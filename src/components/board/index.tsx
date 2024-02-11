@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Row, Col, Flex, Divider } from "antd";
 
 import { useStatuses } from "features/statuses/useSatuses";
@@ -8,10 +9,15 @@ import { Status } from "components/status";
 export const Board = () => {
     const { statuses } = useStatuses();
     const { tasks } = useTasks();
+    // show everything except closed status
+    const displayedStatuses = useMemo(
+        () => statuses.filter(({ id }) => id !== "5f33"), // id of closed status
+        [statuses]
+    );
 
     return (
         <Row gutter={[16, 16]}>
-            {statuses.map((status) => {
+            {displayedStatuses.map((status) => {
                 const tasksByStatus = tasks.filter(
                     ({ statusId }) => statusId === status.id
                 );

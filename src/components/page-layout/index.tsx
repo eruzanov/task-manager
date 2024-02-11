@@ -1,5 +1,6 @@
 import { Layout, ConfigProvider, Button, Flex } from "antd";
 import { GithubOutlined } from "@ant-design/icons";
+
 import { NavMenu } from "components/nav-menu";
 
 const GITHUB_LINK = "https://github.com/eruzanov/task-manager";

@@ -10,8 +10,8 @@
     {
       "title": "Добавить Board",
       "description": "Будет показывать задачи в колонках, у задач появятся статусы",
-      "statusId": "73d5",
-      "updatedAt": 1707605177080,
+      "statusId": "5f33",
+      "updatedAt": 1707615396100,
       "id": "4123"
     },
     {
@@ -24,8 +24,8 @@
     {
       "title": "[Board] добавить страницу и сверстать layout",
       "description": "by subj",
-      "statusId": "73d5",
-      "updatedAt": 1707604741273,
+      "statusId": "5f33",
+      "updatedAt": 1707615380319,
       "id": "b98b"
     },
     {
@@ -36,8 +36,8 @@
     },
     {
       "title": " Добавить в задачи статусы",
-      "statusId": "73d5",
-      "updatedAt": 1707604754430,
+      "statusId": "5f33",
+      "updatedAt": 1707615387404,
       "id": "1b01"
     },
     {
@@ -76,8 +76,8 @@
     {
       "title": "Добавить фильтр в список задач",
       "description": "фильтр по статусам",
-      "statusId": "819e",
-      "updatedAt": 1707605924752,
+      "statusId": "f7a2",
+      "updatedAt": 1707615576335,
       "id": "db07"
     },
     {
@@ -97,8 +97,8 @@
     {
       "title": "Обновить README",
       "description": "Описать цель проекта и его запуск",
-      "statusId": "d6af",
-      "updatedAt": 1707606685300,
+      "statusId": "5f33",
+      "updatedAt": 1707615407931,
       "id": "6adb"
     },
     {
@@ -111,9 +111,23 @@
     {
       "title": "Добавить статус close",
       "description": "Добавить новый статус в задачу - close",
-      "statusId": "f7a2",
-      "updatedAt": 1707605930192,
+      "statusId": "73d5",
+      "updatedAt": 1707615517463,
       "id": "33aa"
+    },
+    {
+      "title": "Ссылку Create Task в меню сделать кнопкой",
+      "description": "Похоже придется сделать кастомное меню",
+      "statusId": "819e",
+      "updatedAt": 1707614601712,
+      "id": "8f2b"
+    },
+    {
+      "title": "Добавить метку дедлайна в задачу",
+      "description": "Добавить в задачу свойтво deadlineAt, и вывести на карточке",
+      "statusId": "819e",
+      "updatedAt": 1707615569146,
+      "id": "16c0"
     }
   ],
   "statuses": [
@@ -132,6 +146,10 @@
     {
       "id": "73d5",
       "title": "done"
+    },
+    {
+      "id": "5f33",
+      "title": "closed"
     }
   ]
 }
