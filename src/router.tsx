@@ -8,34 +8,24 @@ import { Board } from "./components/board";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: (
-            <PageLayout>
-                <ListOfTasks />
-            </PageLayout>
-        ),
-    },
-    {
-        path: "/task/:taskId",
-        element: (
-            <PageLayout>
-                <FormEditTask />
-            </PageLayout>
-        ),
-    },
-    {
-        path: "/board",
-        element: (
-            <PageLayout>
-                <Board />
-            </PageLayout>
-        ),
-    },
-    {
-        path: "/calendar",
-        element: (
-            <PageLayout>
-                <h1>Calendar, coming soon...</h1>
-            </PageLayout>
-        ),
+        element: <PageLayout />,
+        children: [
+            {
+                index: true,
+                element: <Board />,
+            },
+            {
+                path: "backlog",
+                element: <ListOfTasks />,
+            },
+            {
+                path: "task/:taskId",
+                element: <FormEditTask />,
+            },
+            {
+                path: "calendar",
+                element: <h1>Calendar, coming soon...</h1>,
+            },
+        ],
     },
 ]);

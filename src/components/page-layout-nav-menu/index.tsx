@@ -9,8 +9,8 @@ import {
 } from "@ant-design/icons";
 
 const items: MenuProps["items"] = [
-    { key: "/", label: "Backlog", icon: <UnorderedListOutlined /> },
-    { key: "/board", label: "Board", icon: <ProjectOutlined /> },
+    { key: "/backlog", label: "Backlog", icon: <UnorderedListOutlined /> },
+    { key: "/", label: "Board", icon: <ProjectOutlined /> },
     {
         key: "/calendar",
         label: "Calendar",
