@@ -43,7 +43,7 @@ export const FormTask: React.FC<FormTaskProps> = ({
                     <Input />
                 </Form.Item>
                 <Form.Item<Task> label="Description" name="description">
-                    <Input.TextArea />
+                    <Input.TextArea autoSize />
                 </Form.Item>
                 {hasId && <SelectStatus />}
                 <Form.Item>
