@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { PageLayout } from "./components/page-layout";
-import { ListOfTasks } from "./components/list-of-tasks";
+import { Backlog } from "./components/backlog";
 import { FormEditTask } from "./components/form-edit-task";
 import { Board } from "./components/board";
 
@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "backlog",
-                element: <ListOfTasks />,
+                element: <Backlog />,
             },
             {
                 path: "task/:taskId",

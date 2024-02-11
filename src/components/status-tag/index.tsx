@@ -6,7 +6,7 @@ export interface TagOfTaskProps {
     statusId?: string;
 }
 
-export const Status: React.FC<TagOfTaskProps> = ({ statusId }) => {
+export const StatusTag: React.FC<TagOfTaskProps> = ({ statusId }) => {
     const { statuses } = useStatuses();
     const color = useColor(statusId);
     const title = statuses.find(({ id }) => id === statusId)?.title ?? "empty";

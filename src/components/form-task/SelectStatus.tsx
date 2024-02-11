@@ -1,13 +1,13 @@
 import { Form, Select } from "antd";
 import { Task } from "features/tasks/types";
 import { useStatuses } from "features/statuses/useSatuses";
-import { Status } from "components/status";
+import { StatusTag } from "components/status-tag";
 
 export const SelectStatus = () => {
     const { statuses } = useStatuses();
     const selectOptions = statuses.map(({ id }) => ({
         value: id,
-        label: <Status statusId={id} />,
+        label: <StatusTag statusId={id} />,
     }));
 
     return (
