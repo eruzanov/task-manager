@@ -12,7 +12,7 @@ export const useEditTask = (id: string) => {
         (payload: Task) => {
             return fetch(`${API_URL}/tasks/${id}`, {
                 method: "put",
-                body: JSON.stringify(payload),
+                body: JSON.stringify({ ...payload, updatedAt: Date.now() }),
             });
         },
         [id]

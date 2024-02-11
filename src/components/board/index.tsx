@@ -12,7 +12,7 @@ export const Board = () => {
     return (
         <Row gutter={[16, 16]}>
             {statuses.map((status) => {
-                const cards = tasks.filter(
+                const tasksByStatus = tasks.filter(
                     ({ statusId }) => statusId === status.id
                 );
                 return (
@@ -21,13 +21,8 @@ export const Board = () => {
                             <Status statusId={status.id} />
                         </Divider>
                         <Flex vertical gap="middle">
-                            {cards.map(({ id, title, description }) => (
-                                <BoardCard
-                                    key={id}
-                                    id={id}
-                                    title={title}
-                                    content={description}
-                                />
+                            {tasksByStatus.map((task) => (
+                                <BoardCard key={task.id} {...task} />
                             ))}
                         </Flex>
                     </Col>

@@ -1,0 +1,7 @@
+.board-card__description {
+    margin-bottom: 8px;
+}
+
+.board-card__updated {
+    color: rgba(0, 0, 0, 0.45);
+}

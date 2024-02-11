@@ -5,6 +5,8 @@ export type Task = {
     statusId?: Status["id"];
     title: string;
     description: string;
+    createdAt: number;
+    updatedAt: number;
 };
 
-export type NewTask = Omit<Task, "id" | "statusId">;
+export type NewTask = Omit<Task, "id" | "statusId" | "updatedAt">;

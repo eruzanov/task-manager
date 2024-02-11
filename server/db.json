@@ -4,98 +4,115 @@
       "title": "Добавить редактирование задач",
       "description": "by subj",
       "statusId": "73d5",
+      "updatedAt": 1707613327775,
       "id": "fe75"
     },
     {
       "title": "Добавить Board",
       "description": "Будет показывать задачи в колонках, у задач появятся статусы",
       "statusId": "73d5",
+      "updatedAt": 1707605177080,
       "id": "4123"
     },
     {
       "title": "Удаление задач",
       "description": "Добавить кнопку Remove в форму редактирования задачи\n\nНужно закрыть, в пользу задачи http://localhost:5173/task/33aa",
       "statusId": "819e",
+      "updatedAt": 1707604739252,
       "id": "82fb"
     },
     {
       "title": "[Board] добавить страницу и сверстать layout",
       "description": "by subj",
       "statusId": "73d5",
+      "updatedAt": 1707604741273,
       "id": "b98b"
     },
     {
       "title": "TESTq",
       "description": "desc",
+      "updatedAt": 1707604752768,
       "id": "c4b3"
     },
     {
       "title": " Добавить в задачи статусы",
       "statusId": "73d5",
+      "updatedAt": 1707604754430,
       "id": "1b01"
     },
     {
       "title": "Компонент с тегами для задач",
       "description": "использовать <Tag />",
       "statusId": "73d5",
+      "updatedAt": 1707604756317,
       "id": "61e1"
     },
     {
       "title": "Заменить fetch на useFetcher",
       "statusId": "73d5",
+      "updatedAt": 1707605306250,
       "id": "379a"
     },
     {
-      "id": "ec7a",
       "title": "asdasd",
-      "description": "asASDasd"
+      "description": "asASDasd",
+      "updatedAt": 1707605860333,
+      "id": "ec7a"
     },
     {
       "title": "Добавить иконки в заголовок",
       "description": "посмотреть тут https://ant.design/components/icon",
       "statusId": "73d5",
+      "updatedAt": 1707604762491,
       "id": "0f02"
     },
     {
       "title": "Добавить ссылку на Github",
       "description": "Добавить футер и в него уже вставить ссылку",
       "statusId": "d6af",
+      "updatedAt": 1707605977918,
       "id": "a4e6"
     },
     {
       "title": "Добавить фильтр в список задач",
       "description": "фильтр по статусам",
       "statusId": "819e",
+      "updatedAt": 1707605924752,
       "id": "db07"
     },
     {
       "title": "Заменить useFetcher на React Query",
       "description": "https://tanstack.com/query/v3",
       "statusId": "d6af",
+      "updatedAt": 1707605301039,
       "id": "f19a"
     },
     {
       "title": "Добавить сортировку в список задач",
-      "description": "Сортировка по времени изменения и создания, нужно к задаче добавить timestamp",
-      "statusId": "f7a2",
+      "description": "Сортировка по времени изменения\nНужно к задаче добавить: createdAt и updatedAt",
+      "statusId": "d6af",
+      "updatedAt": 1707613046440,
       "id": "beaf"
     },
     {
       "title": "Обновить README",
       "description": "Описать цель проекта и его запуск",
       "statusId": "d6af",
+      "updatedAt": 1707606685300,
       "id": "6adb"
     },
     {
       "title": "Переход на прошлую страницу страницу после изменения задачи",
       "description": "Реализовать переход на прошлую страницу после создания или редактирования задачи",
       "statusId": "d6af",
+      "updatedAt": 1707604768185,
       "id": "19ca"
     },
     {
       "title": "Добавить статус close",
       "description": "Добавить новый статус в задачу - close",
-      "statusId": "819e",
+      "statusId": "f7a2",
+      "updatedAt": 1707605930192,
       "id": "33aa"
     }
   ],

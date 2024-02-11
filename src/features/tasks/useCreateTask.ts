@@ -7,7 +7,7 @@ export const useCreateTask = () => {
     const { mutate, isLoading, isSuccess } = useMutation((payload: NewTask) =>
         fetch(`${API_URL}/tasks`, {
             method: "post",
-            body: JSON.stringify(payload),
+            body: JSON.stringify({...payload, createdAt: Date.now()}),
         })
     );
 
