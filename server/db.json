@@ -141,6 +141,26 @@
       "statusId": "d6af",
       "updatedAt": 1707667440419,
       "id": "72ae"
+    },
+    {
+      "title": "👾 Отрефачить код в FSD",
+      "description": "https://feature-sliced.design/docs/get-started/overview",
+      "statusId": "819e",
+      "updatedAt": 1707674406590,
+      "id": "c3cb"
+    },
+    {
+      "title": "💅🏻 Обновить верстку для редактирования задачи",
+      "statusId": "f7a2",
+      "updatedAt": 1707677994594,
+      "id": "874f"
+    },
+    {
+      "title": "👾 Для разработки своего сервера возможно стоит сделать monorepo",
+      "description": "Simple monorepos via npm workspaces and TypeScript project references:\nhttps://2ality.com/2021/07/simple-monorepos.html\n\nВозможно пригодится:\nhttps://vitejs.dev/guide/dep-pre-bundling.html#monorepos-and-linked-dependencies",
+      "statusId": "819e",
+      "updatedAt": 1707678331116,
+      "id": "f99c"
     }
   ],
   "statuses": [
