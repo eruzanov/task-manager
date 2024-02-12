@@ -5,7 +5,7 @@ import {
     ExclamationCircleOutlined,
 } from "@ant-design/icons";
 
-import { useDateTime } from "features/datetime/useDateTime";
+import { useDateTime } from "features/datetime/use-date-time";
 import { DEFAULT_DATE_FORMAT } from "features/datetime/constants";
 
 interface DeadlineTagProps {

@@ -1,6 +1,6 @@
 import { Tag } from "antd";
-import { useStatuses } from "features/statuses/useSatuses";
-import { useColor } from "./useColor";
+import { useStatuses } from "features/statuses/use-satuses";
+import { useColor } from "./use-color";
 
 export interface TagOfTaskProps {
     statusId?: string;

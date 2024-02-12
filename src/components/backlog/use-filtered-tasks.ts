@@ -16,8 +16,5 @@ export const useFilteredTasks = (tasks: Task[]) => {
         [filterValues, tasks]
     );
 
-    return {
-        onChangeFilter,
-        filteredTasks,
-    };
+    return { onChangeFilter, filteredTasks };
 };

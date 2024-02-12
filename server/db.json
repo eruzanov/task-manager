@@ -162,11 +162,11 @@
       "id": "874f"
     },
     {
-      "title": "👾 Для разработки своего сервера возможно стоит сделать monorepo",
+      "title": "👾 Для API сервера возможно стоит сделать monorepo",
       "description": "Simple monorepos via npm workspaces and TypeScript project references:\nhttps://2ality.com/2021/07/simple-monorepos.html\n\nВозможно пригодится:\nhttps://vitejs.dev/guide/dep-pre-bundling.html#monorepos-and-linked-dependencies",
       "deadlineAt": 1708290000000,
       "statusId": "819e",
-      "updatedAt": 1707689890329,
+      "updatedAt": 1707697222828,
       "id": "f99c"
     },
     {
@@ -186,13 +186,15 @@
     {
       "title": "🤔 Возможно нужно таски группировать по целям",
       "description": "У цели должен быть дедлайн\nМожет появиться несколько досок подразные цели\nПоявится главная страница с дашбордом целей 🥰",
-      "updatedAt": 1707682531151,
+      "statusId": "819e",
+      "updatedAt": 1707697876897,
       "id": "a6a7"
     },
     {
-      "id": "4880",
       "title": "👾 Заменить PageLayoutNavMenu на NavLink",
-      "createdAt": 1707694947850
+      "statusId": "819e",
+      "updatedAt": 1707697856189,
+      "id": "4880"
     }
   ],
   "statuses": [

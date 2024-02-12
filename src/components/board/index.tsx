@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { Row, Col, Flex, Divider } from "antd";
 
-import { useStatuses } from "features/statuses/useSatuses";
-import { useTasks } from "features/tasks/useTasks";
+import { useStatuses } from "features/statuses/use-satuses";
+import { useTasks } from "features/tasks/use-tasks";
 import { BoardCard } from "components/board-card";
 import { StatusTag } from "components/status-tag";
 

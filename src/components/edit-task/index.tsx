@@ -3,10 +3,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Card } from "antd";
 
 import { FormTask } from "components/form-task";
-import { useEditTask } from "features/tasks/useEditTask";
-import { TaskTitle } from "./TaskTitle";
+import { useEditTask } from "features/tasks/use-edit-task";
+import { TaskTitle } from "./task-title";
 
-export const FormEditTask = () => {
+export const EditTask = () => {
     const navigate = useNavigate();
     const { taskId } = useParams() as { taskId: string };
     const { task, update, isLoading, isSuccess } = useEditTask(taskId);

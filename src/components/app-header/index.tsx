@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Layout, Button, Divider, Modal } from "antd";
 
 import { AppNavMenu } from "components/app-nav-menu";
-import { FormCreateTask } from "components/form-create-task";
+import { CreateTask } from "components/create-task";
 
 export const AppHeader = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,7 +33,7 @@ export const AppHeader = () => {
                 footer={null}
                 destroyOnClose
             >
-                <FormCreateTask onSuccess={handleCancel} />
+                <CreateTask onSuccess={handleCancel} />
             </Modal>
         </Layout.Header>
     );

@@ -1,8 +1,8 @@
 import { Form, Input, Button, DatePicker } from "antd";
 
 import { Task } from "features/tasks/types";
-import { SelectStatus } from "./SelectStatus";
-import { useDateTime } from "features/datetime/useDateTime";
+import { SelectStatus } from "./select-status";
+import { useDateTime } from "features/datetime/use-date-time";
 
 interface FormTaskProps {
     onFinish: (data: Task) => void;

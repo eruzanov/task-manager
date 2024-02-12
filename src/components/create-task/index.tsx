@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 
 import { NewTask } from "features/tasks/types";
-import { useCreateTask } from "features/tasks/useCreateTask";
+import { useCreateTask } from "features/tasks/use-create-task";
 import { FormTask } from "components/form-task";
 
-interface FormCreateTask {
+interface CreateTask {
     onSuccess: () => void;
 }
 
-export const FormCreateTask: React.FC<FormCreateTask> = ({ onSuccess }) => {
+export const CreateTask: React.FC<CreateTask> = ({ onSuccess }) => {
     const { create, isLoading, isSuccess } = useCreateTask();
     const onFinish = (values: NewTask) => create(values);
 

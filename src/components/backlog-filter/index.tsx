@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Card, Select } from "antd";
 
-import { useStatuses } from "features/statuses/useSatuses";
+import { useStatuses } from "features/statuses/use-satuses";
 import { StatusTag } from "components/status-tag";
 
 interface BacklogFilterProps {

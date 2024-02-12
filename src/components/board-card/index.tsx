@@ -3,9 +3,9 @@ import { Card, Divider } from "antd";
 import { EditOutlined, EyeOutlined } from "@ant-design/icons";
 
 import type { Task } from "features/tasks/types";
-import { useDateTime } from "features/datetime/useDateTime";
+import { useDateTime } from "features/datetime/use-date-time";
 import { DEFAULT_DATE_FORMAT } from "features/datetime/constants";
-import { DeadlineTag } from "./DeadlineTag";
+import { DeadlineTag } from "./deadline-tag";
 import "./board-card.css";
 
 type BoardCardProps = Task;

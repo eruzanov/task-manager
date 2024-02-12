@@ -1,9 +1,9 @@
 import { Row, Col, Affix } from "antd";
 
-import { useTasks } from "features/tasks/useTasks";
+import { useTasks } from "features/tasks/use-tasks";
 import { BacklogTasks } from "components/backlog-tasks";
 import { BacklogFilter } from "components/backlog-filter";
-import { useFilteredTasks } from "./useFilteredTasks";
+import { useFilteredTasks } from "./use-filtered-tasks";
 
 export const Backlog = () => {
     const { tasks, isLoading } = useTasks();

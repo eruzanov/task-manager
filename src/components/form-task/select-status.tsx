@@ -1,6 +1,6 @@
 import { Form, Select } from "antd";
 import { Task } from "features/tasks/types";
-import { useStatuses } from "features/statuses/useSatuses";
+import { useStatuses } from "features/statuses/use-satuses";
 import { StatusTag } from "components/status-tag";
 
 export const SelectStatus = () => {

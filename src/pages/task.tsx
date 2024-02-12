@@ -1,7 +1,7 @@
-import { FormEditTask } from "components/form-edit-task";
+import { EditTask } from "components/edit-task";
 
 export const Task = () => (
     <div style={{ margin: 24 }}>
-        <FormEditTask />
+        <EditTask />
     </div>
 );

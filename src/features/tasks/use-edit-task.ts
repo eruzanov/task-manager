@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useMutation } from "react-query";
 
-import { useTask } from "./useTask";
+import { useTask } from "./use-task";
 import { Task } from "./types";
 
 const API_URL = import.meta.env.VITE_API_URL;
