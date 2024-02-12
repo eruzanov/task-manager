@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { Card, Divider } from "antd";
-import { EditOutlined, EyeOutlined } from "@ant-design/icons";
+import { EyeOutlined } from "@ant-design/icons";
 
 import type { Task } from "features/tasks/types";
-import { useDateTime } from "features/datetime/use-date-time";
-import { DEFAULT_DATE_FORMAT } from "features/datetime/constants";
+import { isNotPassedTask } from "features/board/is-not-passed-task";
 import { DeadlineTag } from "./deadline-tag";
-import "./board-card.css";
+import { UpdatedAt } from "./updated-at";
 
 type BoardCardProps = Task;
 
@@ -18,15 +17,15 @@ export const BoardCard: React.FC<BoardCardProps> = ({
     deadlineAt,
     statusId,
 }) => {
-    const datetime = useDateTime();
-    const isNotPassed = statusId !== "5f33" && statusId !== "73d5" // closed and done
+    const isNotPassed = isNotPassedTask(statusId);
+    const showDeadline = deadlineAt && isNotPassed;
 
     return (
         <Card title={title}>
             {description && (
-                <div className="board-card__description">{description}</div>
+                <div style={{ marginBottom: 8 }}>{description}</div>
             )}
-            {deadlineAt && isNotPassed && (
+            {showDeadline && (
                 <>
                     <DeadlineTag date={deadlineAt} />
                     <Divider type="vertical" />
@@ -34,10 +33,7 @@ export const BoardCard: React.FC<BoardCardProps> = ({
             )}
             {updatedAt && (
                 <>
-                    <span className="board-card__updated">
-                        <EditOutlined />{" "}
-                        {datetime(updatedAt).format(DEFAULT_DATE_FORMAT)}
-                    </span>
+                    <UpdatedAt date={updatedAt} />
                     <Divider type="vertical" />
                 </>
             )}

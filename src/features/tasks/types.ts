@@ -2,7 +2,7 @@ import { Status } from "features/statuses/types";
 
 export type Task = {
     id: string;
-    statusId?: Status["id"];
+    statusId: Status["id"];
     title: string;
     description: string;
     createdAt: number;
