@@ -1,14 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { PageLayout } from "./components/page-layout";
-import { Backlog } from "./components/backlog";
-import { FormEditTask } from "./components/form-edit-task";
-import { Board } from "./components/board";
+import { AppLayout } from "components/app-layout";
+import { Backlog } from "./backlog";
+import { Task } from "./task";
+import { Board } from "./board";
+import { Scheduler } from "./scheduler";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <PageLayout />,
+        element: <AppLayout />,
         children: [
             {
                 index: true,
@@ -20,11 +21,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "task/:taskId",
-                element: <FormEditTask />,
+                element: <Task />,
             },
             {
-                path: "calendar",
-                element: <h1>Calendar, coming soon...</h1>,
+                path: "scheduler",
+                element: <Scheduler />,
             },
         ],
     },

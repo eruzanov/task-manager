@@ -11,15 +11,10 @@ import {
 const items: MenuProps["items"] = [
     { key: "/backlog", label: "Backlog", icon: <UnorderedListOutlined /> },
     { key: "/", label: "Board", icon: <ProjectOutlined /> },
-    {
-        key: "/calendar",
-        label: "Calendar",
-        icon: <CalendarOutlined />,
-        disabled: true,
-    },
+    { key: "/scheduler", label: "Calendar", icon: <CalendarOutlined /> },
 ];
 
-export const PageLayoutNavMenu = () => {
+export const AppNavMenu = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const onClick = ({ key }: { key: string }) => navigate(key);

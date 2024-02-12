@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { Layout, ConfigProvider, theme } from "antd";
 
-import { PageLayoutHeader } from "components/page-layout-header";
-import { PageLayoutFooter } from "components/page-layout-footer";
+import { AppHeader } from "components/app-header";
+import { AppFooter } from "components/app-footer";
 
-export const PageLayout = () => {
+export const AppLayout = () => {
     const { token } = theme.useToken();
     return (
         <ConfigProvider
@@ -14,11 +14,11 @@ export const PageLayout = () => {
             }}
         >
             <Layout style={{ minHeight: "100vh" }}>
-                <PageLayoutHeader />
-                <Layout.Content style={{ margin: 24 }}>
+                <AppHeader />
+                <Layout.Content>
                     <Outlet />
                 </Layout.Content>
-                <PageLayoutFooter />
+                <AppFooter />
             </Layout>
         </ConfigProvider>
     );

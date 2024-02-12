@@ -3,7 +3,7 @@ import { GithubOutlined } from "@ant-design/icons";
 
 const GITHUB_LINK = "https://github.com/eruzanov/task-manager";
 
-export const PageLayoutFooter = () => {
+export const AppFooter = () => {
     return (
         <Layout.Footer>
             <Flex align="center" justify="center">
