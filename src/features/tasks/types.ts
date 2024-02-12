@@ -10,4 +10,4 @@ export type Task = {
     deadlineAt?: number;
 };
 
-export type NewTask = Omit<Task, "id" | "statusId" | "updatedAt">;
+export type NewTask = Omit<Task, "id" | "updatedAt">;

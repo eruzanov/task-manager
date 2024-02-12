@@ -3,7 +3,7 @@ import { Card, Divider } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 
 import type { Task } from "features/tasks/types";
-import { isNotPassedTask } from "features/board/is-not-passed-task";
+import { useBoard } from "features/board/use-board";
 import { DeadlineTag } from "./deadline-tag";
 import { UpdatedAt } from "./updated-at";
 
@@ -17,7 +17,8 @@ export const BoardCard: React.FC<BoardCardProps> = ({
     deadlineAt,
     statusId,
 }) => {
-    const isNotPassed = isNotPassedTask(statusId);
+    const { isPassedTask } = useBoard();
+    const isNotPassed = !isPassedTask(statusId);
     const showDeadline = deadlineAt && isNotPassed;
 
     return (
