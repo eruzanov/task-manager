@@ -1,0 +1,37 @@
+import { Link } from "react-router-dom";
+import { List, theme } from "antd";
+
+import type { Task as TaskType } from "entities/tasks/types";
+import { StatusTag } from "./status-tag";
+
+interface TasksProps {
+    isLoading: boolean;
+    tasks: TaskType[];
+}
+
+export const Tasks: React.FC<TasksProps> = ({ isLoading, tasks }) => {
+    const {
+        token: { colorBgContainer },
+    } = theme.useToken();
+
+    return (
+        <List
+            size="large"
+            loading={isLoading}
+            style={{ background: colorBgContainer }}
+            bordered
+            dataSource={tasks}
+            renderItem={(task) => (
+                <List.Item>
+                    <List.Item.Meta
+                        title={
+                            <Link to={`/task/${task.id}`}>{task.title}</Link>
+                        }
+                        description={task.description}
+                    />
+                    <StatusTag statusId={task.statusId} />
+                </List.Item>
+            )}
+        />
+    );
+};

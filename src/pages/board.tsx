@@ -1,3 +1,3 @@
-import { Board as BoardComponent } from "components/board";
+import { Board as BoardWidget } from "widgets/board";
 
-export const Board = () => <BoardComponent />;
+export const Board = () => <BoardWidget />;

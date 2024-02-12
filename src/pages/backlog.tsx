@@ -1,4 +1,4 @@
-import { Backlog as BacklogComponent } from "components/backlog";
+import { Backlog as BacklogComponent } from "widgets/backlog";
 
 export const Backlog = () => (
     <div style={{ margin: 24 }}>

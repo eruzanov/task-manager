@@ -1,4 +1,4 @@
-import { Calendar } from "components/calendar";
+import { Calendar } from "widgets/calendar";
 
 export const Scheduler = () => {
     return (

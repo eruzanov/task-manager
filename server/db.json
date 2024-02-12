@@ -65,7 +65,7 @@
       "title": "💅🏻 Добавить фильтр в список задач",
       "description": "фильтр по статусам",
       "statusId": "d6af",
-      "updatedAt": 1707674092494,
+      "updatedAt": 1707825764443,
       "id": "db07"
     },
     {
@@ -79,8 +79,8 @@
       "title": "Добавить сортировку в список задач",
       "description": "Сортировка по времени изменения\nНужно к задаче добавить: createdAt и updatedAt",
       "deadlineAt": 1708981200000,
-      "statusId": "73d5",
-      "updatedAt": 1707691400738,
+      "statusId": "5f33",
+      "updatedAt": 1707825778286,
       "id": "beaf"
     },
     {
@@ -108,8 +108,8 @@
       "title": "💅🏻 Ссылку Create Task в меню сделать кнопкой",
       "description": "Похоже придется сделать кастомное меню\nФорму задачи открывать в модалке",
       "deadlineAt": 1707693215000,
-      "statusId": "73d5",
-      "updatedAt": 1707693993391,
+      "statusId": "5f33",
+      "updatedAt": 1707768288655,
       "id": "8f2b"
     },
     {
@@ -138,13 +138,13 @@
       "description": "Добавить .env в gitignore\nИ соотвественно обновить README",
       "deadlineAt": 1708030800000,
       "statusId": "819e",
-      "updatedAt": 1707689907349,
+      "updatedAt": 1707823527736,
       "id": "53ed"
     },
     {
       "title": "👾 Порефачить роутер, его можно упростить",
-      "statusId": "73d5",
-      "updatedAt": 1707678512004,
+      "statusId": "5f33",
+      "updatedAt": 1707768276210,
       "id": "72ae"
     },
     {
@@ -152,7 +152,7 @@
       "description": "https://feature-sliced.design/docs/get-started/overview",
       "deadlineAt": 1707944400000,
       "statusId": "f7a2",
-      "updatedAt": 1707696853067,
+      "updatedAt": 1707829143905,
       "id": "c3cb"
     },
     {
@@ -164,9 +164,8 @@
     {
       "title": "👾 Для API сервера возможно стоит сделать monorepo",
       "description": "Simple monorepos via npm workspaces and TypeScript project references:\nhttps://2ality.com/2021/07/simple-monorepos.html\n\nВозможно пригодится:\nhttps://vitejs.dev/guide/dep-pre-bundling.html#monorepos-and-linked-dependencies",
-      "deadlineAt": 1708290000000,
       "statusId": "819e",
-      "updatedAt": 1707697222828,
+      "updatedAt": 1707829937610,
       "id": "f99c"
     },
     {
@@ -199,9 +198,15 @@
     {
       "title": "👾 Для новых задач добавить статус Pending",
       "deadlineAt": 1707771600000,
-      "statusId": "f7a2",
-      "updatedAt": 1707755045479,
+      "statusId": "73d5",
+      "updatedAt": 1707817405469,
       "id": "a195"
+    },
+    {
+      "title": "🤓 Научись https://mui.com/",
+      "statusId": "819e",
+      "updatedAt": 1707829953754,
+      "id": "65b6"
     }
   ],
   "statuses": [
