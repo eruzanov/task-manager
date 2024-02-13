@@ -6,21 +6,19 @@ import { EditTask } from "widgets/edit-task";
 const styleTitle = { marginTop: 0 };
 
 export const Task = () => {
-    const { taskId } = useParams() as { taskId: string };
+    const { taskId } = useParams();
 
     return (
-        <div style={{ margin: 24 }}>
-            <Card>
-                <Space>
-                    <Typography.Title level={3} style={styleTitle}>
-                        Edit task:
-                    </Typography.Title>
-                    <Typography.Title level={3} type="secondary" style={styleTitle}>
-                        {taskId}
-                    </Typography.Title>
-                </Space>
-                <EditTask id={taskId} />
-            </Card>
-        </div>
+        <Card style={{ margin: 24 }}>
+            <Space>
+                <Typography.Title level={3} style={styleTitle}>
+                    Edit task:
+                </Typography.Title>
+                <Typography.Title level={3} type="secondary" style={styleTitle}>
+                    {taskId}
+                </Typography.Title>
+            </Space>
+            <EditTask id={taskId!} />
+        </Card>
     );
 };

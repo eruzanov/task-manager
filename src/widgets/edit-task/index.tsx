@@ -33,11 +33,11 @@ export const EditTask: React.FC<EditTaskProps> = ({ id }) => {
                 name="title"
                 rules={[{ required: true, message: "Please input Title" }]}
             >
-                <Input />
+                <Input size="large" />
             </Form.Item>
 
             <Form.Item<Task> label="Description" name="description">
-                <Input.TextArea autoSize rows={4} />
+                <Input.TextArea autoSize rows={4} size="large" />
             </Form.Item>
 
             <Form.Item label="Deadline" name="deadlineAt">
