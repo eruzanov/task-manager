@@ -1,8 +1,8 @@
 import type { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import { useMemo } from "react";
 import { Badge } from "antd";
 
-import { useDateTime } from "shared/datetime/use-date-time";
 import { useTasks } from "entities/tasks/use-tasks";
 import { useBoard } from "entities/board/use-board";
 
@@ -21,16 +21,15 @@ const styleBadgeStatus = {
 };
 
 export const DateCell: React.FC<{ date: Dayjs }> = ({ date }) => {
-    const datetime = useDateTime();
     const { isNotPassedTask } = useBoard();
     const { tasks } = useTasks();
     const listData = useMemo(() => {
         return tasks.filter(
             (task) =>
                 isNotPassedTask(task) &&
-                date.isSame(datetime(task.deadlineAt ?? null), "day")
+                date.isSame(dayjs(task.deadlineAt ?? null), "day")
         );
-    }, [tasks, isNotPassedTask, date, datetime]);
+    }, [tasks, isNotPassedTask, date]);
 
     return (
         <ul style={eventsStyle}>

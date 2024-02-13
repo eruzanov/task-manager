@@ -1,6 +1,6 @@
 import { Form, Input, Button } from "antd";
+import dayjs from "dayjs";
 
-import { useDateTime } from "shared/datetime/use-date-time";
 import { Task } from "entities/tasks/types";
 import { SelectStatus } from "features/select-status";
 import { useEditTask } from "features/edit-task/use-edit-task";
@@ -11,11 +11,10 @@ interface EditTaskProps {
 }
 
 export const EditTask: React.FC<EditTaskProps> = ({ id }) => {
-    const datetime = useDateTime();
     const { task, update, isLoading, isFetchingTask } = useEditTask(id);
     const initialValues = {
         ...task,
-        deadlineAt: task?.deadlineAt ? datetime(task.deadlineAt) : undefined,
+        deadlineAt: task?.deadlineAt ? dayjs(task.deadlineAt) : undefined,
     };
     const handleFinish = (values: Task) =>
         update({ ...values, deadlineAt: values.deadlineAt?.valueOf() });

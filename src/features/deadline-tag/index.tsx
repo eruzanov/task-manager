@@ -1,23 +1,22 @@
 import { Tag } from "antd";
+import dayjs from "dayjs";
 import {
     SmileOutlined,
     ClockCircleOutlined,
     ExclamationCircleOutlined,
 } from "@ant-design/icons";
 
-import { useDateTime } from "shared/datetime/use-date-time";
-import { DEFAULT_DATE_FORMAT } from "shared/datetime/constants";
+import { DEFAULT_DATE_FORMAT } from "shared/datetime";
 
 interface DeadlineTagProps {
     date: number;
 }
 
 export const DeadlineTag: React.FC<DeadlineTagProps> = ({ date }) => {
-    const datetime = useDateTime();
-    const formated = datetime(date).format(DEFAULT_DATE_FORMAT);
-    const isBeforeWeek = datetime().isBefore(datetime(date), "week");
-    const lessThanWeek = datetime().isSame(datetime(date), "week");
-    const isSameDay = datetime().isSame(datetime(date), "day");
+    const formated = dayjs(date).format(DEFAULT_DATE_FORMAT);
+    const isBeforeWeek = dayjs().isBefore(dayjs(date), "week");
+    const lessThanWeek = dayjs().isSame(dayjs(date), "week");
+    const isSameDay = dayjs().isSame(dayjs(date), "day");
 
     if (isBeforeWeek)
         return (
