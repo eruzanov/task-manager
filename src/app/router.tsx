@@ -4,7 +4,7 @@ import { AppLayout } from "./app-layout";
 import { Backlog } from "pages/backlog";
 import { Task } from "pages/task";
 import { Board } from "pages/board";
-import { Scheduler } from "pages/scheduler";
+import { Calendar } from "pages/calendar";
 
 export const router = createBrowserRouter([
     {
@@ -24,8 +24,8 @@ export const router = createBrowserRouter([
                 element: <Task />,
             },
             {
-                path: "scheduler",
-                element: <Scheduler />,
+                path: "calendar",
+                element: <Calendar />,
             },
         ],
     },

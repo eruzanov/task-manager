@@ -9,7 +9,7 @@ export const Header = () => {
             style={{
                 position: "sticky",
                 top: 0,
-                zIndex: 1,
+                zIndex: 10,
                 display: "flex",
                 alignItems: "center",
                 width: "100%",

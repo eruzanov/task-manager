@@ -11,7 +11,7 @@ import {
 const items: MenuProps["items"] = [
     { key: "/backlog", label: "Backlog", icon: <UnorderedListOutlined /> },
     { key: "/", label: "Board", icon: <ProjectOutlined /> },
-    { key: "/scheduler", label: "Calendar", icon: <CalendarOutlined /> },
+    { key: "/calendar", label: "Calendar", icon: <CalendarOutlined /> },
 ];
 
 export const NavMenu = () => {
