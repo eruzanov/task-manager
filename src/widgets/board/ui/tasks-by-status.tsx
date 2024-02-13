@@ -1,7 +1,7 @@
 import { Flex } from "antd";
 
-import { useTasksByStatus } from "entities/board/use-tasks-by-status";
-import { BoardCard } from "widgets/board/ui/board-card";
+import { useTasksByStatus } from "../use-tasks-by-status";
+import { BoardCard } from "./board-card";
 
 interface TasksByStatusProps {
     statusId: string;

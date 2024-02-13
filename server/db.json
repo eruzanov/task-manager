@@ -137,8 +137,8 @@
       "title": "🤖 Добавить .env в gitignore",
       "description": "Добавить .env в gitignore\nИ соотвественно обновить README",
       "deadlineAt": 1708030800000,
-      "statusId": "819e",
-      "updatedAt": 1707823527736,
+      "statusId": "f7a2",
+      "updatedAt": 1707830044868,
       "id": "53ed"
     },
     {
@@ -151,14 +151,14 @@
       "title": "👾 Отрефачить код в FSD",
       "description": "https://feature-sliced.design/docs/get-started/overview",
       "deadlineAt": 1707944400000,
-      "statusId": "f7a2",
-      "updatedAt": 1707829143905,
+      "statusId": "d6af",
+      "updatedAt": 1707830026654,
       "id": "c3cb"
     },
     {
       "title": "💅🏻 Обновить верстку для редактирования задачи",
-      "statusId": "d6af",
-      "updatedAt": 1707678472601,
+      "statusId": "73d5",
+      "updatedAt": 1707830385682,
       "id": "874f"
     },
     {
@@ -191,8 +191,9 @@
     },
     {
       "title": "👾 Заменить PageLayoutNavMenu на NavLink",
+      "deadlineAt": 1708203600000,
       "statusId": "819e",
-      "updatedAt": 1707697856189,
+      "updatedAt": 1707830370427,
       "id": "4880"
     },
     {
@@ -204,8 +205,9 @@
     },
     {
       "title": "🤓 Научись https://mui.com/",
-      "statusId": "819e",
-      "updatedAt": 1707829953754,
+      "deadlineAt": 1708030800000,
+      "statusId": "f7a2",
+      "updatedAt": 1707830051898,
       "id": "65b6"
     }
   ],
