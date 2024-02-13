@@ -3,6 +3,7 @@ import { Layout, ConfigProvider, theme } from "antd";
 
 import { Header } from "./ui/header";
 import { Footer } from "./ui/footer";
+import "./styles.css";
 
 export const AppLayout = () => {
     const { token } = theme.useToken();
