@@ -1,8 +1,8 @@
 import { Row, Col, Affix } from "antd";
 
 import { useTasks } from "entities/tasks/use-tasks";
-import { useFilteredTasks } from "entities/tasks/use-filtered-tasks";
-import { BacklogFilter } from "features/backlog/backlog-filter";
+import { useFilteredTasks } from "features/backlog-filter/use-filtered-tasks";
+import { Filter } from "./ui/filter";
 import { Tasks } from "./ui/tasks";
 
 export const Backlog = () => {
@@ -16,7 +16,7 @@ export const Backlog = () => {
             </Col>
             <Col span={6}>
                 <Affix offsetTop={88}>
-                    <BacklogFilter onChange={onChangeFilter} />
+                    <Filter onChange={onChangeFilter} />
                 </Affix>
             </Col>
         </Row>
