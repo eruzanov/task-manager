@@ -1,12 +1,12 @@
 import { Card } from "antd";
 
-import { SelectStatus } from "entities/board/ui/select-status";
+import { SelectStatus } from "features/select-status";
 
-interface FilterProps {
+interface BacklogFilterProps {
     onChange: (values: string[]) => void;
 }
 
-export const Filter: React.FC<FilterProps> = ({ onChange }) => {
+export const BacklogFilter: React.FC<BacklogFilterProps> = ({ onChange }) => {
     return (
         <Card title="Filter">
             <SelectStatus

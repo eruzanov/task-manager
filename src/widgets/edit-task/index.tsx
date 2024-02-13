@@ -2,7 +2,7 @@ import { Form, Input, Button } from "antd";
 
 import { useDateTime } from "shared/datetime/use-date-time";
 import { Task } from "entities/tasks/types";
-import { SelectStatus } from "entities/board/ui/select-status";
+import { SelectStatus } from "features/select-status";
 import { useEditTask } from "features/edit-task/use-edit-task";
 import { DeadlineDatePicker } from "features/deadline-date-picker";
 

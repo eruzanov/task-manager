@@ -4,19 +4,21 @@ import { List, theme } from "antd";
 import type { Task as TaskType } from "entities/tasks/types";
 import { StatusTag } from "./status-tag";
 
-interface TasksProps {
+interface BacklogTasksProps {
     isLoading: boolean;
     tasks: TaskType[];
 }
 
-export const Tasks: React.FC<TasksProps> = ({ isLoading, tasks }) => {
+export const BacklogTasks: React.FC<BacklogTasksProps> = ({
+    isLoading,
+    tasks,
+}) => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
 
     return (
         <List
-            size="large"
             loading={isLoading}
             style={{ background: colorBgContainer }}
             bordered

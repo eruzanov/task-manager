@@ -16,12 +16,5 @@ export const SelectStatus: React.FC<SelectProps> = (props) => {
         [statuses]
     );
 
-    return (
-        <Select
-            mode={props.mode}
-            tagRender={StatusTag}
-            options={selectOptions}
-            {...props}
-        />
-    );
+    return <Select tagRender={StatusTag} options={selectOptions} {...props} />;
 };
