@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 
 import { useStatuses } from "shared/api/statuses/use-satuses";
+import { Task } from "entities/tasks/types";
 import {
     DEFAULT_STATUS_ID,
     COLORS,
@@ -11,8 +12,8 @@ import {
     REVIEW,
 } from "./constants";
 
-const isPassedTask = (taskStatusId: string) => {
-    return [CLOSED, DONE].includes(taskStatusId);
+const isNotPassedTask = (task: Task) => {
+    return ![CLOSED, DONE].includes(task.statusId);
 };
 
 export const useBoard = () => {
@@ -25,5 +26,5 @@ export const useBoard = () => {
         [statuses]
     );
 
-    return { DEFAULT_STATUS_ID, COLORS, isPassedTask, boardStatuses };
+    return { DEFAULT_STATUS_ID, COLORS, isNotPassedTask, boardStatuses };
 };

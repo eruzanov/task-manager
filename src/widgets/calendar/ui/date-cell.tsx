@@ -22,17 +22,15 @@ const styleBadgeStatus = {
 
 export const DateCell: React.FC<{ date: Dayjs }> = ({ date }) => {
     const datetime = useDateTime();
-    const { isPassedTask } = useBoard();
+    const { isNotPassedTask } = useBoard();
     const { tasks } = useTasks();
-    const listData = useMemo(
-        () =>
-            tasks.filter(
-                (task) =>
-                    !isPassedTask(task.statusId) &&
-                    date.isSame(datetime(task.deadlineAt ?? null), "day")
-            ),
-        [datetime, isPassedTask, tasks, date]
-    );
+    const listData = useMemo(() => {
+        return tasks.filter(
+            (task) =>
+                isNotPassedTask(task) &&
+                date.isSame(datetime(task.deadlineAt ?? null), "day")
+        );
+    }, [tasks, isNotPassedTask, date, datetime]);
 
     return (
         <ul style={eventsStyle}>

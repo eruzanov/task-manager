@@ -64,8 +64,8 @@
     {
       "title": "💅🏻 Добавить фильтр в список задач",
       "description": "фильтр по статусам",
-      "statusId": "d6af",
-      "updatedAt": 1707852980748,
+      "statusId": "73d5",
+      "updatedAt": 1707862265948,
       "id": "db07"
     },
     {
@@ -152,7 +152,7 @@
       "description": "https://feature-sliced.design/docs/get-started/overview",
       "deadlineAt": 1707944400000,
       "statusId": "d6af",
-      "updatedAt": 1707830026654,
+      "updatedAt": 1707862172821,
       "id": "c3cb"
     },
     {
@@ -186,13 +186,13 @@
       "title": "🤔 Возможно нужно таски группировать по целям",
       "description": "У цели должен быть дедлайн\nМожет появиться несколько досок подразные цели\nПоявится главная страница с дашбордом целей 🥰",
       "statusId": "819e",
-      "updatedAt": 1707697876897,
+      "updatedAt": 1707861854011,
       "id": "a6a7"
     },
     {
       "title": "👾 Заменить PageLayoutNavMenu на NavLink",
-      "statusId": "819e",
-      "updatedAt": 1707861525424,
+      "statusId": "8b48",
+      "updatedAt": 1707861817279,
       "id": "4880"
     },
     {
@@ -206,8 +206,8 @@
       "title": "🤓 Научись https://mui.com/",
       "description": "📺 https://youtu.be/OZ_FUaV_xbg?si=FS9GWFOBuHAS702B",
       "deadlineAt": 1708030800000,
-      "statusId": "f7a2",
-      "updatedAt": 1707846689654,
+      "statusId": "819e",
+      "updatedAt": 1707861848566,
       "id": "65b6"
     },
     {
@@ -224,14 +224,14 @@
     },
     {
       "title": "👾 Импортировать dayjs явно",
-      "statusId": "819e",
-      "updatedAt": 1707852955070,
+      "statusId": "f7a2",
+      "updatedAt": 1707862255470,
       "id": "8f28"
     },
     {
       "title": "👾 Добавить isNotPassedTask(task), использовать вместо isPassedTask(taskStatusId)",
-      "statusId": "819e",
-      "updatedAt": 1707852964319,
+      "statusId": "d6af",
+      "updatedAt": 1707862250364,
       "id": "e62b"
     }
   ],
