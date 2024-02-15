@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 
+import { Backlog } from "@/pages/backlog";
+import { Board } from "@/pages/board";
+import { Calendar } from "@/pages/calendar";
+import { Task } from "@/pages/task";
 import { AppLayout } from "./app-layout";
-import { Backlog } from "pages/backlog";
-import { Task } from "pages/task";
-import { Board } from "pages/board";
-import { Calendar } from "pages/calendar";
 
 export const router = createBrowserRouter([
     {

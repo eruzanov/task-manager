@@ -2,8 +2,8 @@ import { useCallback, useEffect } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 
-import { useTask } from "entities/tasks/use-task";
-import { Task } from "entities/tasks/types";
+import { Task } from "@/entities/tasks/types";
+import { useTask } from "@/entities/tasks/use-task";
 
 const API_URL = import.meta.env.VITE_API_URL;
 

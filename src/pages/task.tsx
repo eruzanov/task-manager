@@ -1,7 +1,7 @@
 import { Card, Typography, Space } from "antd";
 import { useParams } from "react-router-dom";
 
-import { EditTask } from "widgets/edit-task";
+import { EditTask } from "@/widgets/edit-task";
 
 const styleTitle = { marginTop: 0 };
 

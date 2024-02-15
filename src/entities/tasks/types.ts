@@ -1,4 +1,4 @@
-import { Status } from "shared/api/statuses/types";
+import { Status } from "@/shared/api/statuses/types";
 
 export type Task = {
     id: string;

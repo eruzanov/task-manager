@@ -1,10 +1,10 @@
 import { Form, Input, Button } from "antd";
 import dayjs from "dayjs";
 
-import { Task } from "entities/tasks/types";
-import { SelectStatus } from "features/select-status";
-import { useEditTask } from "features/edit-task/use-edit-task";
-import { DeadlineDatePicker } from "features/deadline-date-picker";
+import { DeadlineDatePicker } from "@/features/deadline-date-picker";
+import { useEditTask } from "@/features/edit-task/use-edit-task";
+import { SelectStatus } from "@/features/select-status";
+import { Task } from "@/entities/tasks/types";
 
 interface EditTaskProps {
     id: string;

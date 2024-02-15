@@ -1,6 +1,6 @@
 import { Row, Col } from "antd";
 
-import { useBoard } from "entities/board/use-board";
+import { useBoard } from "@/entities/board/use-board";
 import { ColumnTitle } from "./ui/column-title";
 import { TasksByStatus } from "./ui/tasks-by-status";
 

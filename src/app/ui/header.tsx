@@ -1,7 +1,7 @@
 import { Layout, Divider } from "antd";
 
-import { NavMenu } from "../../widgets/nav-menu";
-import { CreateTask } from "widgets/create-task";
+import { CreateTask } from "@/widgets/create-task";
+import { NavMenu } from "@/widgets/nav-menu";
 
 export const Header = () => {
     return (

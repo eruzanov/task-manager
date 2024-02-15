@@ -1,12 +1,12 @@
-import { useMemo } from "react";
-import type { MenuProps } from "antd";
-import { Menu } from "antd";
-import { useNavigate, useLocation } from "react-router-dom";
 import {
     UnorderedListOutlined,
     ProjectOutlined,
     CalendarOutlined,
 } from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import { Menu } from "antd";
+import { useMemo } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const items: MenuProps["items"] = [
     { key: "/backlog", label: "Backlog", icon: <UnorderedListOutlined /> },

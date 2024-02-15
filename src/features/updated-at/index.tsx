@@ -2,7 +2,7 @@ import { EditOutlined } from "@ant-design/icons";
 import { theme } from "antd";
 import dayjs from "dayjs";
 
-import { DEFAULT_DATE_FORMAT } from "shared/datetime";
+import { DEFAULT_DATE_FORMAT } from "@/shared/datetime";
 
 interface UpdatedAtProps {
     date: number;

@@ -1,7 +1,7 @@
 import type { SelectProps } from "antd";
 import { Tag } from "antd";
 
-import { useBoard } from "entities/board/use-board";
+import { useBoard } from "@/entities/board/use-board";
 
 type TagRender = SelectProps["tagRender"];
 

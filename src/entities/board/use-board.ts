@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 
-import { useStatuses } from "shared/api/statuses/use-satuses";
-import { Task } from "entities/tasks/types";
+import { Task } from "@/entities/tasks/types";
+import { useStatuses } from "@/shared/api/statuses/use-satuses";
 import {
     DEFAULT_STATUS_ID,
     COLORS,

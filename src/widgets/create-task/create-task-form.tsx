@@ -1,9 +1,9 @@
-import { useEffect } from "react";
 import { Form, Input, Button } from "antd";
+import { useEffect } from "react";
 
-import { Task } from "entities/tasks/types";
-import { useCreateTask } from "features/create-task/use-create-task";
-import { DeadlineDatePicker } from "features/deadline-date-picker";
+import { useCreateTask } from "@/features/create-task/use-create-task";
+import { DeadlineDatePicker } from "@/features/deadline-date-picker";
+import { Task } from "@/entities/tasks/types";
 
 interface CreateTaskFormProps {
     onSuccess: () => void;

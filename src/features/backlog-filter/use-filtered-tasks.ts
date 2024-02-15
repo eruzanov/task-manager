@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import type { Task } from "entities/tasks/types";
+import type { Task } from "@/entities/tasks/types";
 
 export const useFilteredTasks = (tasks: Task[]) => {
     const [filterValues, setFilterValues] = useState<string[]>([]);

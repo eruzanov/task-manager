@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { Card, Divider } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
+import { Card, Divider } from "antd";
+import { Link } from "react-router-dom";
 
-import type { Task } from "entities/tasks/types";
-import { useBoard } from "entities/board/use-board";
-import { DeadlineTag } from "features/deadline-tag";
-import { UpdatedAt } from "features/updated-at";
+import { DeadlineTag } from "@/features/deadline-tag";
+import { UpdatedAt } from "@/features/updated-at";
+import { useBoard } from "@/entities/board/use-board";
+import type { Task } from "@/entities/tasks/types";
 
 export const BoardCard: React.FC<Task> = (task) => {
     const { id, title, description, updatedAt, deadlineAt } = task;

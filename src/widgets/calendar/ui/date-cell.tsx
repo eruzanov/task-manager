@@ -1,10 +1,10 @@
+import { Badge } from "antd";
 import type { Dayjs } from "dayjs";
 import dayjs from "dayjs";
 import { useMemo } from "react";
-import { Badge } from "antd";
 
-import { useTasks } from "entities/tasks/use-tasks";
-import { useBoard } from "entities/board/use-board";
+import { useBoard } from "@/entities/board/use-board";
+import { useTasks } from "@/entities/tasks/use-tasks";
 
 const eventsStyle = {
     margin: 0,

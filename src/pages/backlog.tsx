@@ -1,9 +1,9 @@
 import { Row, Col, Affix } from "antd";
 
-import { useTasks } from "entities/tasks/use-tasks";
-import { useFilteredTasks } from "features/backlog-filter/use-filtered-tasks";
-import { BacklogTasks } from "widgets/backlog-tasks";
-import { BacklogFilter } from "widgets/backlog-filter";
+import { BacklogFilter } from "@/widgets/backlog-filter";
+import { BacklogTasks } from "@/widgets/backlog-tasks";
+import { useFilteredTasks } from "@/features/backlog-filter/use-filtered-tasks";
+import { useTasks } from "@/entities/tasks/use-tasks";
 
 export const Backlog = () => {
     const { tasks, isLoading } = useTasks();

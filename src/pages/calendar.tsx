@@ -1,4 +1,4 @@
-import { Calendar as CalendarWidget } from "widgets/calendar";
+import { Calendar as CalendarWidget } from "@/widgets/calendar";
 
 export const Calendar = () => {
     return (

@@ -1,6 +1,6 @@
 import { Card } from "antd";
 
-import { SelectStatus } from "features/select-status";
+import { SelectStatus } from "@/features/select-status";
 
 interface BacklogFilterProps {
     onChange: (values: string[]) => void;

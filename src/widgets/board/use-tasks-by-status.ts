@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import type { Task } from "entities/tasks/types";
-import { useTasks } from "entities/tasks/use-tasks";
+import type { Task } from "@/entities/tasks/types";
+import { useTasks } from "@/entities/tasks/use-tasks";
 
 const byUpdatedAt = (a: Task, b: Task) => b.updatedAt - a.updatedAt;
 

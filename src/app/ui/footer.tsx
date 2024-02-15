@@ -1,5 +1,5 @@
-import { Layout, Button, Flex } from "antd";
 import { GithubOutlined } from "@ant-design/icons";
+import { Layout, Button, Flex } from "antd";
 
 const GITHUB_LINK = "https://github.com/eruzanov/task-manager";
 

@@ -1,8 +1,8 @@
-import { useMemo } from "react";
 import { Tag } from "antd";
+import { useMemo } from "react";
 
-import { useStatuses } from "shared/api/statuses/use-satuses";
-import { useBoard } from "entities/board/use-board";
+import { useBoard } from "@/entities/board/use-board";
+import { useStatuses } from "@/shared/api/statuses/use-satuses";
 
 export interface StatusTagProps {
     statusId: string | number;

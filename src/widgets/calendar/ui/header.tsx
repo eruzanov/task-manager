@@ -1,10 +1,10 @@
 import type { CalendarProps } from "antd";
+import { Typography, Button, Select, Flex } from "antd";
 import type { Dayjs } from "dayjs";
 
 import dayjs from "dayjs";
-import { Typography, Button, Select, Flex } from "antd";
 
-import { DEFAULT_DATE_FORMAT } from "shared/datetime";
+import { DEFAULT_DATE_FORMAT } from "@/shared/datetime";
 
 // @ts-expect-error don't exists method months()
 const options = dayjs.months().map((label: string, i: number) => ({ value: i, label }));

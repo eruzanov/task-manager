@@ -1,12 +1,12 @@
-import { Tag } from "antd";
-import dayjs from "dayjs";
 import {
     SmileOutlined,
     ClockCircleOutlined,
     ExclamationCircleOutlined,
 } from "@ant-design/icons";
+import { Tag } from "antd";
+import dayjs from "dayjs";
 
-import { DEFAULT_DATE_FORMAT } from "shared/datetime";
+import { DEFAULT_DATE_FORMAT } from "@/shared/datetime";
 
 interface DeadlineTagProps {
     date: number;

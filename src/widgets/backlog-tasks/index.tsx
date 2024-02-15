@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { List, theme } from "antd";
+import { Link } from "react-router-dom";
 
-import type { Task as TaskType } from "entities/tasks/types";
+import type { Task as TaskType } from "@/entities/tasks/types";
 import { StatusTag } from "./status-tag";
 
 interface BacklogTasksProps {

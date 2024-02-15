@@ -1,8 +1,8 @@
 import { useCallback } from "react";
 import { useMutation } from "react-query";
 
-import { NewTask } from "entities/tasks/types";
-import { useBoard } from "entities/board/use-board";
+import { useBoard } from "@/entities/board/use-board";
+import { NewTask } from "@/entities/tasks/types";
 
 const API_URL = import.meta.env.VITE_API_URL;
 

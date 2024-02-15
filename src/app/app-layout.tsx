@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
 import { Layout, ConfigProvider, theme } from "antd";
+import { Outlet } from "react-router-dom";
 
-import { Header } from "./ui/header";
 import { Footer } from "./ui/footer";
+import { Header } from "./ui/header";
 import "./styles.css";
 
 export const AppLayout = () => {

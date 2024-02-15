@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { Task } from "entities/tasks/types";
+import { Task } from "@/entities/tasks/types";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
