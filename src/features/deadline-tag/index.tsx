@@ -14,6 +14,7 @@ interface DeadlineTagProps {
 
 export const DeadlineTag: React.FC<DeadlineTagProps> = ({ date }) => {
     const formated = dayjs(date).format(DEFAULT_DATE_FORMAT);
+    const isAfter = dayjs().isAfter(dayjs(date), "day");
     const isBeforeWeek = dayjs().isBefore(dayjs(date), "week");
     const lessThanWeek = dayjs().isSame(dayjs(date), "week");
     const isSameDay = dayjs().isSame(dayjs(date), "day");
@@ -36,7 +37,7 @@ export const DeadlineTag: React.FC<DeadlineTagProps> = ({ date }) => {
             </Tag>
         );
 
-    if (lessThanWeek && isSameDay)
+    if (lessThanWeek && isSameDay || isAfter)
         return (
             <Tag
                 bordered={false}
