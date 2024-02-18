@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 
-import { Task } from "@/entities/tasks/types";
 import { useStatuses } from "@/shared/api/statuses/use-satuses";
 import {
     DEFAULT_STATUS_ID,
@@ -12,7 +11,7 @@ import {
     REVIEW,
 } from "./constants";
 
-const isNotPassedTask = (task: Task) => {
+const isNotPassedTask = (task: { statusId: string }) => {
     return ![CLOSED, DONE].includes(task.statusId);
 };
 
