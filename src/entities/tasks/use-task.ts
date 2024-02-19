@@ -1,15 +1,11 @@
-import { useCallback } from "react";
 import { useQuery } from "react-query";
 import { Task } from "@/entities/tasks/types";
-
-const API_URL = import.meta.env.VITE_API_URL;
+import { getItem } from "@/shared/api/firebase";
 
 export const useTask = (id: string) => {
-    const getTask = useCallback(async (id: string): Promise<Task> => {
-        const response = await fetch(`${API_URL}/tasks/${id}`);
-        return response.json();
-    }, []);
-    const { data, isFetching } = useQuery(["tasks", id], () => getTask(id));
+    const { data, isFetching } = useQuery(["tasks", id], () =>
+        getItem<Task>("tasks", id)
+    );
 
     return { task: data, isFetching };
 };
